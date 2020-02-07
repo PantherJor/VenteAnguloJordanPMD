@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Margenes -->
+    <dimen name = "margen_pantalla">16dp</dimen>
+    <dimen name = "arriba_titulos">80dp</dimen>
+    <dimen name="margen_arriba_boton_login">24dp</dimen>
+
+    <!-- Tamanhos letra -->
+    <dimen name="tamanho_titulos">45sp</dimen>
+
+</resources>

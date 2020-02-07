@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Login</string>
+    <string name="registro_name">Registro</string>
+
+
+    <!-- Etiquetas -->
+    <string name="label_email_usuario">Email:</string>
+    <string name="label_contrasenha_usuario">Contraseña:</string>
+
+    <!-- Hints -->
+    <string name="hint_email_usuario">Introduce Email</string>
+    <string name="hint_contrasenha_usuario">Introduce contraseña</string>
+
+    <!-- Botones -->
+    <string name="boton_login">Acceder</string>
+    <string name="registro">Registro</string>
+    <string name="boton_Registro">Registrarse</string>
+
+
+    <!-- Checkbox -->
+    <string name="checkbox_recordar_contrasenha">recordar contraseña</string>
+    <string name="checkbox_Acpetar_Terminos">Aceptar Términos</string>
+</resources>

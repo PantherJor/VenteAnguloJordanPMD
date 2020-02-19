@@ -3,8 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".activities.PeliculaListActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_add_white_24dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -14,6 +23,8 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:text="Lista de películas"
+        android:textColor="@color/color_tiulo_lista"
+        android:textStyle="bold"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,8 +32,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvPeliculaList"
-        android:layout_width="439dp"
-        android:layout_height="527dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="16dp"
         android:padding="16dp"
         android:textSize="10sp"

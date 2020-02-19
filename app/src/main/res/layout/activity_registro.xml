@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/arriba_titulos"
             android:text="@string/registro_name"
-            android:textColor="@color/color_tiulo_login"
+            android:textColor="@color/darkprimaycolored"
             android:textSize="@dimen/tamanho_titulos"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
@@ -51,7 +51,7 @@
             android:layout_marginTop="60dp"
             android:layout_marginEnd="16dp"
             android:text="@string/label_email_usuario"
-            android:textColor="@android:color/black"
+            android:textColor="@color/darkprimaycolored"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/tvTituloApp" />
 
@@ -76,7 +76,7 @@
             android:layout_marginTop="60dp"
             android:layout_marginEnd="16dp"
             android:text="@string/label_contrasenha_usuario"
-            android:textColor="@android:color/black"
+            android:textColor="@color/darkprimaycolored"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
 
@@ -129,7 +129,7 @@
             android:layout_marginTop="48dp"
             android:ems="10"
             android:text="Repetir contraseña:"
-            android:textColor="@android:color/black"
+            android:textColor="@color/darkprimaycolored"
             android:gravity="center"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/tvContraseña" />
@@ -141,7 +141,7 @@
             android:layout_marginTop="60dp"
             android:layout_marginEnd="16dp"
             android:text="Nombre:"
-            android:textColor="@android:color/black"
+            android:textColor="@color/darkprimaycolored"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/tvRepitContraseña" />
 
@@ -164,7 +164,7 @@
             android:layout_marginTop="60dp"
             android:layout_marginEnd="16dp"
             android:text="Apellidos:"
-            android:textColor="@android:color/black"
+            android:textColor="@color/darkprimaycolored"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
 

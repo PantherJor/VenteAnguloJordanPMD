@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo1">
+    android:background="@drawable/gris">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/arriba_titulos"
             android:text="@string/app_name"
-            android:textColor="#FFC800"
+            android:textColor="@color/darkprimaycolored"
             android:textSize="@dimen/tamanho_titulos"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
@@ -51,7 +51,7 @@
             android:layout_marginTop="60dp"
             android:layout_marginEnd="16dp"
             android:text="@string/label_email_usuario"
-            android:textColor="@android:color/holo_orange_light"
+            android:textColor="@color/darkprimaycolored"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/tvTituloApp" />
 
@@ -76,7 +76,7 @@
             android:layout_marginTop="60dp"
             android:layout_marginEnd="16dp"
             android:text="@string/label_contrasenha_usuario"
-            android:textColor="@android:color/holo_orange_light"
+            android:textColor="@color/darkprimaycolored"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
 
@@ -107,13 +107,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_end="286dp" />
+            app:layout_constraintGuide_percent="0.28710464" />
 
         <CheckBox
             android:id="@+id/chcheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="@string/checkbox_recordar_contrasenha"
             app:layout_constraintStart_toStartOf="@+id/guideline"

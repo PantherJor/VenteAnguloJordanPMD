@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#f06292</color>
+    <color name="colorPrimaryDark">#E91E63</color>
+    <color name="colorAccent">#C2185B</color>
+    <color name="darkprimaycolored">#C2185B</color>
 
-
-    <color name="color_tiulo_login">#FFC800</color>
+    <color name="color_tiulo_login">#C2185B</color>
+    <color name="color_tiulo_lista">#C2185B</color>
 
 
 </resources>

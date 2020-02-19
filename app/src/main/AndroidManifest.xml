@@ -9,11 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.PeliculaListActivity"></activity>
-        <activity android:name=".RegistroActivity">
+        <activity
+            android:name=".activities.PeliculaListActivity"
+            android:label="Lista"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".RegistroActivity"
+            android:label="Registro"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
 
-        </activity>
-        <activity android:name=".MainActivity">
             <intent-filter>
 
 

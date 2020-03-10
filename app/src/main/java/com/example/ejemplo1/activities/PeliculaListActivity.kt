@@ -1,6 +1,7 @@
 package com.example.ejemplo1.activities
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -22,6 +23,14 @@ class PeliculaListActivity : AppCompatActivity() {
         val peliculas = mockPeliculas()
 
         var adapter = PeliculaListAdapter(peliculas, this)
+
+        var sharedPref = getSharedPreferences("appPelis", Context.MODE_PRIVATE)
+
+        floatingActionButton2.setOnClickListener{
+            val i3 = Intent(this, NuevaPeliculaActivity::class.java )
+            startActivity(i3)
+        }
+
 
         rvPeliculaList.adapter = adapter
 
@@ -46,4 +55,6 @@ class PeliculaListActivity : AppCompatActivity() {
 
         )
     }
+
+
 }

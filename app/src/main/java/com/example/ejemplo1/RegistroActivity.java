@@ -60,11 +60,14 @@ public class RegistroActivity extends AppCompatActivity {
 
 
 
+
+
+
             }
         });
 
 
-        Button btn2 = findViewById(R.id.btnRegistrarse);
+        /*Button btn2 = findViewById(R.id.btnRegistrarse);
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,6 +76,6 @@ public class RegistroActivity extends AppCompatActivity {
 
 
             }
-        });
+        });*/
     }
 }

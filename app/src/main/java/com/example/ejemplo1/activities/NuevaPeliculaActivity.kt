@@ -9,16 +9,20 @@ import kotlinx.android.synthetic.main.activity_list_peliculas.*
 
 class NuevaPeliculaActivity : AppCompatActivity() {
 
+    companion object {
+        val ACCION_PELICULA = "formulario_nueva_pelicula"
+        val ANHADIR_PELICULA = 0
+        val EDITAR_PELICULA = 1
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.formulario_nueva_pelicula);
 
+        val accion = intent.extras?.get(ACCION_PELICULA)
 
-        var sharedPref = getSharedPreferences("appPelis", Context.MODE_PRIVATE)
 
-        floatingActionButton2.setOnClickListener{
-            val i3 = Intent(this, NuevaPeliculaActivity::class.java )
-            startActivity(i3)
+        if (EDITAR_PELICULA.equals(accion)){
+
         }
 
 

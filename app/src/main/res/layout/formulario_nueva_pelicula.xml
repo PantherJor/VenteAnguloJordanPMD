@@ -15,18 +15,18 @@
             android:id="@+id/editTextgenero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="56dp"
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.113"
+            app:layout_constraintHorizontal_bias="0.114"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@+id/editTextano" />
 
         <ImageView
             android:id="@+id/imageViewadd"
-            android:layout_width="115dp"
-            android:layout_height="104dp"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
             android:layout_marginStart="44dp"
             android:layout_marginTop="72dp"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -37,11 +37,11 @@
             android:id="@+id/editTextnewtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="76dp"
+            android:layout_marginTop="44dp"
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.113"
+            app:layout_constraintHorizontal_bias="0.114"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@+id/seleccionarImagen" />
 
@@ -64,7 +64,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.113"
+            app:layout_constraintHorizontal_bias="0.114"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@+id/editTextnewtitle" />
 
@@ -107,7 +107,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="36dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="24dp"
             android:text="Añadir"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.17"
@@ -118,12 +118,12 @@
             android:id="@+id/textViewtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="340dp"
+            android:layout_marginTop="300dp"
             android:layout_marginEnd="52dp"
             android:text="Título:"
             android:textColor="@color/darkprimaycolored"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
-            app:layout_constraintHorizontal_bias="0.932"
+            app:layout_constraintHorizontal_bias="0.9"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -136,10 +136,10 @@
 
         <Button
             android:id="@+id/seleccionarImagen"
-            android:layout_width="104dp"
-            android:layout_height="43dp"
-            android:layout_marginStart="52dp"
-            android:layout_marginTop="28dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="36dp"
             android:text="Selecciona imagen"
             android:textSize="10sp"
             app:layout_constraintStart_toStartOf="@+id/guideline2"

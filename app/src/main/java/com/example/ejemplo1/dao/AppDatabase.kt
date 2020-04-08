@@ -9,7 +9,7 @@ import com.example.ejemplo1.entities.Pelicula
 @Database(entities = [Pelicula::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
 
-    abstract fun peliculaDao (): PeliculaDao
+    abstract fun getPeliculaDao (): PeliculaDao
     companion object {
 
         private var database: AppDatabase? = null
@@ -20,7 +20,7 @@ abstract class AppDatabase : RoomDatabase() {
                 database = Room.databaseBuilder(
                     context,
                     AppDatabase:: class . java ,
-                    "my-imdb"
+                    "peliculas_bd"
                 ).build()
             }
             return database

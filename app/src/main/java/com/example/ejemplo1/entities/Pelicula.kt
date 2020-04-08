@@ -6,12 +6,14 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Pelicula(
-
-    @PrimaryKey(autoGenerate = true) var id: Long,
-
-    var title:String,
-    var type:String,
+    var title: String,
+    var type: String,
     var year: Int,
     var country:String,
-    val imagen: Drawable?
-) {}
+    val imagen: Drawable?,
+
+    @PrimaryKey
+    val id: Long = 1
+) {
+
+}

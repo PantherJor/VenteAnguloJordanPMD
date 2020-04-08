@@ -7,19 +7,21 @@ import com.example.ejemplo1.entities.Pelicula
 @Dao
 interface PeliculaDao {
 
+
+
     @Query ( " SELECT * FROM Pelicula " )
     fun getAll () : LiveData<List<Pelicula>>
 
-    @Query ( " SELECT * FROM Pelicula WHERE id LIKE :id")
-    fun findByid ( id : String ) : Pelicula
+    @Query ( " SELECT * FROM Pelicula WHERE id = :id")
+    fun findByid ( id : Long ) : Pelicula?
 
-    @Insert
-    fun insertAll ( vararg pelicula : Pelicula)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    fun update (pelicula : Pelicula)
 
     @Delete
     fun eliminar ( pelicula : Pelicula )
 
-    @Update
-    fun UpdateAll (vararg pelicula : Pelicula )
+
 
 }
+

@@ -47,11 +47,11 @@ class PeliculaListActivity : AppCompatActivity() {
 
     private fun mockPeliculas(): List<Pelicula> {
         return listOf(
-            Pelicula("Bad Boys for Life", "Acción/comedia", 2020, "Estados Unidos", imagen = getDrawable(R.drawable.bad_boys)),
-            Pelicula("Joker", "Drama", 2019, "Estados Unidos",imagen = getDrawable(R.drawable.joker)),
+            Pelicula("Bad Boys", "Acción/comedia", 2020, "Estados Unidos", imagen = getDrawable(R.drawable.bad_boys) ),
+            Pelicula("Joker", "Drama", 2019, "Estados Unidos", imagen = getDrawable(R.drawable.joker)),
             Pelicula("Black Panther", "Acción", 2018, "Estados Unidos", imagen = getDrawable(R.drawable.panther)),
             Pelicula("Mi Villano Favorito 3", "Animación/comedia", 2017, "Estados Unidos", imagen = getDrawable(R.drawable.mi_villano_favorito)),
-            Pelicula("Un monstruo viene a verme", "Fantasía", 2016, "España", imagen = getDrawable(R.drawable.un_monstruo_viene_a_verme))
+            Pelicula("Un monstruo viene a verme", "Fantasía", 2016, "España", imagen = getDrawable(R.drawable.un_monstruo_viene_a_verme) )
 
         )
     }

@@ -69,7 +69,6 @@ class MainActivity : AppCompatActivity() {
 
 
         btnRegistro.setOnClickListener {
-
             val i2 = Intent(this, RegistroActivity::class.java)
             startActivity(i2)
         }

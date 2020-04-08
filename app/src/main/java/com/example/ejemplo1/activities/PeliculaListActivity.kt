@@ -18,7 +18,7 @@ class PeliculaListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_peliculas)
-        rvPeliculaList.layoutManager = LinearLayoutManager(this)
+            rvPeliculaList.layoutManager = LinearLayoutManager(this)
 
         val peliculas = mockPeliculas()
 

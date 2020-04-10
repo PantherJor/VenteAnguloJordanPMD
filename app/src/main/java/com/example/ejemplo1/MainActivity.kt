@@ -21,11 +21,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-      val p =   AppDatabase.getDatabase(this@MainActivity)?.getPeliculaDao()?.getAll()
-        editTextnewtitle.setText(p?.toString())
-        editTextgenero.setText(p?.toString())
-        editTextano.setText(p?.toString())
-        editTextPais.setText(p?.toString())
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main);
@@ -37,32 +32,32 @@ class MainActivity : AppCompatActivity() {
 
         btnAcceder.setOnClickListener {
 
-            val emailGuardado = sharedPref.getString("email","")
+            val emailGuardado = sharedPref.getString("email", "")
             val emailIntroducido = etEmail.getText().toString()
 
-            val contrasenaGuardada = sharedPref.getString( "contrasenha","")
+            val contrasenaGuardada = sharedPref.getString("contrasenha", "")
             val contrasenaIntroducida = etContraseña.getText().toString()
 
             Log.d("ContrasenhaGuardada", contrasenaGuardada)
             Log.d("ContrasenhaIntroducida", contrasenaIntroducida)
 
 
-            if(emailGuardado.equals(emailIntroducido)
-                 && contrasenaGuardada.equals(contrasenaIntroducida)){
+            if (emailGuardado.equals(emailIntroducido)
+                && contrasenaGuardada.equals(contrasenaIntroducida)
+            ) {
 
                 val i = Intent(this, PeliculaListActivity::class.java)
                 startActivity(i)
 
-            }else{
-                Toast.makeText(this," error/datos introducidos incorrectos", Toast.LENGTH_LONG).show()
+            } else {
+                Toast.makeText(this, " error/datos introducidos incorrectos", Toast.LENGTH_LONG)
+                    .show()
 
             }
 
 
-
             //val i = Intent(this, PeliculaListActivity::class.java)
             //startActivity(i)
-
 
 
         }
@@ -72,25 +67,6 @@ class MainActivity : AppCompatActivity() {
             val i2 = Intent(this, RegistroActivity::class.java)
             startActivity(i2)
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }

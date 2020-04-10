@@ -10,10 +10,12 @@ data class Pelicula(
     var type: String,
     var year: Int,
     var country:String,
-    val imagen: Drawable?,
+    val imagen: Drawable?
+
+
+) {
 
     @PrimaryKey
-    val id: Long = 1
-) {
+    val id: Long = 0
 
 }

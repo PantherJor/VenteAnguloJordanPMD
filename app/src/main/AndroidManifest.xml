@@ -10,21 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity
-            android:name=".activities.NuevaPeliculaActivity"
-            android:label="Nueva Película"
-            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".activities.NuevaPeliculaActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:screenOrientation="locked"
+                android:value=".activities.PeliculaListActivity"></meta-data>
+        </activity>
         <activity
             android:name=".activities.PeliculaListActivity"
             android:label="Lista"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="locked"></activity>
         <activity
             android:name=".RegistroActivity"
             android:label="Registro"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="locked"></activity>
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="locked">
 
             <intent-filter>
 
@@ -37,5 +41,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

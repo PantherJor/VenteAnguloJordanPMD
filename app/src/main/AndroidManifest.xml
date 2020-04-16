@@ -11,9 +11,12 @@
         android:theme="@style/AppTheme">
 
 
-        <activity android:name=".activities.NuevaPeliculaActivity">
+        <activity
+            android:name=".activities.NuevaPeliculaActivity"
+            android:label="Nueva Lista Pelicula">
 
             <meta-data
+
                 android:name="android.support.PARENT_ACTIVITY"
                 android:screenOrientation="locked"
                 android:value=".activities.PeliculaListActivity"></meta-data>

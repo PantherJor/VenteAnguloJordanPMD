@@ -12,10 +12,6 @@ data class Pelicula(
     var country: String,
     // val imagen: Int?
     @PrimaryKey
-    var id: Long = 1
+    var id: Long = 0
 
-
-) {
-
-
-}
+)

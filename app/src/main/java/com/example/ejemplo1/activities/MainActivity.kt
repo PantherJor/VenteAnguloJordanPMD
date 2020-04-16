@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main)
         floatingActionButton2
         var sharedPref = getSharedPreferences("appPelis", Context.MODE_PRIVATE)
 
@@ -31,10 +31,10 @@ class MainActivity : AppCompatActivity() {
         btnAcceder.setOnClickListener {
 
             val emailGuardado = sharedPref.getString("email", "")
-            val emailIntroducido = etEmail.getText().toString()
+            val emailIntroducido = etEmail.text.toString()
 
             val contrasenaGuardada = sharedPref.getString("contrasenha", "")
-            val contrasenaIntroducida = etPassword.getText().toString()
+            val contrasenaIntroducida = etPassword.text.toString()
 
             Log.d("EmailIntoducido", emailIntroducido)
             Log.d("ContrasenhaIntroducida", contrasenaIntroducida)

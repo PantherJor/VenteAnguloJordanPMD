@@ -23,30 +23,32 @@ class PeliculaListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_list_peliculas)
 
         GlobalScope.launch(Dispatchers.IO) {
-           val p = AppDatabase.getDatabase(this@PeliculaListActivity)?.getPeliculaDao()?.findByid(id = 1)
+            val peliculas =
+                AppDatabase.getDatabase(this@PeliculaListActivity)?.getPeliculaDao()?.getAll()
 
             runOnUiThread {
-                tvPeliculaTitle.text = p?.title ?:""
-                tvPeliculaYear.text = p?.title.toString() 
-                tvPeliculaCountry.text = p?.country ?:""
-                tvPeliculaType.text = p?.type ?:""
+                rvPeliculaList.layoutManager = LinearLayoutManager(this@PeliculaListActivity)
+
+
+                var adapter = PeliculaListAdapter(peliculas.orEmpty(), this@PeliculaListActivity)
+
+                rvPeliculaList.adapter = adapter
+
+                //val peliculas = mockPeliculas()
+                //tvPeliculaTitle.text = peliculas?.toString()
+                //tvPeliculaYear.text = peliculas?.toString()
+                //tvPeliculaCountry.text = peliculas?.toString()
+                //tvPeliculaType.text = peliculas?.toString()
             }
         }
-            rvPeliculaList.layoutManager = LinearLayoutManager(this)
 
-        val peliculas = mockPeliculas()
 
-        var adapter = PeliculaListAdapter(peliculas, this)
+        //getSharedPreferences("appPelis", Context.MODE_PRIVATE)
 
-        getSharedPreferences("appPelis", Context.MODE_PRIVATE)
-
-        floatingActionButton2.setOnClickListener{
-            val i3 = Intent(this, NuevaPeliculaActivity::class.java )
+        floatingActionButton2.setOnClickListener {
+            val i3 = Intent(this, NuevaPeliculaActivity::class.java)
             startActivity(i3)
         }
-
-
-        rvPeliculaList.adapter = adapter
 
 
         //val drawable: Drawable? = ResourcesCompat.getDrawable(resources, R.drawable.bad_boys, null)
@@ -61,11 +63,11 @@ class PeliculaListActivity : AppCompatActivity() {
 
     private fun mockPeliculas(): List<Pelicula> {
         return listOf(
-            Pelicula("Bad Boys", "Acción/comedia", 2020, "Estados Unidos" ),
+            Pelicula("Bad Boys", "Acción/comedia", 2020, "Estados Unidos"),
             Pelicula("Joker", "Drama", 2019, "Estados Unidos"),
             Pelicula("Black Panther", "Acción", 2018, "Estados Unidos"),
             Pelicula("Mi Villano Favorito 3", "Animación/comedia", 2017, "Estados Unidos"),
-            Pelicula("Un monstruo viene a verme", "Fantasía", 2016, "España" )
+            Pelicula("Un monstruo viene a verme", "Fantasía", 2016, "España")
 
         )
     }

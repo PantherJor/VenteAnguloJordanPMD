@@ -9,6 +9,7 @@ import com.example.ejemplo1.R
 import com.example.ejemplo1.bbdd.AppDatabase
 import com.example.ejemplo1.entities.Pelicula
 import kotlinx.android.synthetic.main.formulario_nueva_pelicula.*
+import kotlinx.android.synthetic.main.item_pelicula.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -20,13 +21,13 @@ class NuevaPeliculaActivity : AppCompatActivity() {
         setContentView(R.layout.formulario_nueva_pelicula)
 
         GlobalScope.launch(Dispatchers.IO) {
-            val p = AppDatabase.getDatabase(this@NuevaPeliculaActivity)?.getPeliculaDao()
-                ?.findByid(id = 1)
+            val id = intent.putExtra("id", '0')
+            AppDatabase.getDatabase(this@NuevaPeliculaActivity)?.getPeliculaDao()?.findByid(id = 0)
 
-            editTextnewtitle.setText(p?.title)
-            editTextgenero.setText(p?.type)
-            editTextano.setText(p?.year.toString())
-            editTextPais.setText(p?.country)
+            editTextnewtitle.text.toString()
+            editTextgenero.text.toString()
+            editTextano.text.toString()
+            editTextPais.text.toString()
         }
 
 

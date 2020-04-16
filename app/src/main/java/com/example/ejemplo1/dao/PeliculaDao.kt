@@ -1,6 +1,5 @@
 package com.example.ejemplo1.dao
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.ejemplo1.entities.Pelicula
 
@@ -10,7 +9,7 @@ interface PeliculaDao {
 
 
     @Query ( " SELECT * FROM Pelicula " )
-    fun getAll () : LiveData<List<Pelicula>>
+    fun getAll () : List<Pelicula>
 
     @Query ( " SELECT * FROM Pelicula WHERE id = :id")
     fun findByid ( id : Long ) : Pelicula?

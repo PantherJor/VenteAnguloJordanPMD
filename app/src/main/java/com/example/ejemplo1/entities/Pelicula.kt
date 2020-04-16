@@ -9,13 +9,13 @@ data class Pelicula(
     var title: String,
     var type: String,
     var year: Int,
-    var country:String,
-    val imagen: Drawable?
+    var country: String,
+    // val imagen: Int?
+    @PrimaryKey
+    var id: Long = 1
 
 
 ) {
 
-    @PrimaryKey
-    val id: Long = 0
 
 }

@@ -15,7 +15,7 @@
         android:paddingEnd="16dp"
         android:paddingBottom="16dp"
         android:padding="@dimen/margen_pantalla"
-        tools:context=".MainActivity">
+        tools:context=".activities.MainActivity">
 
         <TextView
             android:id="@+id/tvTituloApp"
@@ -56,11 +56,11 @@
             app:layout_constraintTop_toBottomOf="@+id/tvTituloApp" />
 
         <EditText
-            android:id="@+id/etContraseña"
+            android:id="@+id/etPassword"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="40dp"
             android:ems="10"
             android:hint="@string/hint_contrasenha_usuario"
             android:inputType="textPassword"
@@ -82,25 +82,25 @@
 
         <Button
             android:id="@+id/btnAcceder"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:layout_marginEnd="32dp"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="92dp"
             android:text="@string/boton_login"
-            app:layout_constraintEnd_toStartOf="@+id/btnRegistro"
-            app:layout_constraintHorizontal_bias="0.361"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvContraseña" />
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 
         <Button
             android:id="@+id/btnRegistro"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="92dp"
+            android:layout_marginEnd="12dp"
             android:text="@string/registro"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chcheckBox" />
+            app:layout_constraintHorizontal_bias="0.611"
+            app:layout_constraintStart_toEndOf="@+id/btnAcceder"
+            app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
@@ -108,16 +108,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.28710464" />
-
-        <CheckBox
-            android:id="@+id/chcheckBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/checkbox_recordar_contrasenha"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/etContraseña" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

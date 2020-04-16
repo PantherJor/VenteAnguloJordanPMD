@@ -23,11 +23,11 @@
             android:label="Lista"
             android:screenOrientation="locked"></activity>
         <activity
-            android:name=".RegistroActivity"
+            android:name=".activities.RegistroActivity"
             android:label="Registro"
             android:screenOrientation="locked"></activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:screenOrientation="locked">
 
             <intent-filter>

@@ -1,4 +1,4 @@
-package com.example.ejemplo1;
+package com.example.ejemplo1.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.ejemplo1.R;
 
 
 public class RegistroActivity extends AppCompatActivity {
@@ -27,7 +29,7 @@ public class RegistroActivity extends AppCompatActivity {
 
         btnRegistrarse = findViewById(R.id.btnRegistrarse);
         etEmail = findViewById(R.id.etEmail);
-        etPass = findViewById(R.id.etContraseña);
+        etPass = findViewById(R.id.etPassword);
 
 
         sharedPref = getSharedPreferences(

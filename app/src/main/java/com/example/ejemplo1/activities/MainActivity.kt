@@ -1,4 +1,4 @@
-package com.example.ejemplo1
+package com.example.ejemplo1.activities
 
 import android.content.Context
 import android.content.Intent
@@ -6,14 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import com.example.ejemplo1.activities.PeliculaListActivity
-import com.example.ejemplo1.dao.AppDatabase
-import com.example.ejemplo1.entities.Pelicula
+import com.example.ejemplo1.R
 import kotlinx.android.synthetic.main.activity_list_peliculas.*
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.etContraseña
+import kotlinx.android.synthetic.main.activity_main.etPassword
 import kotlinx.android.synthetic.main.activity_main.etEmail
-import kotlinx.android.synthetic.main.formulario_nueva_pelicula.*
+import kotlinx.android.synthetic.main.activity_registro.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -36,24 +34,27 @@ class MainActivity : AppCompatActivity() {
             val emailIntroducido = etEmail.getText().toString()
 
             val contrasenaGuardada = sharedPref.getString("contrasenha", "")
-            val contrasenaIntroducida = etContraseña.getText().toString()
+            val contrasenaIntroducida = etPassword.getText().toString()
 
-            Log.d("ContrasenhaGuardada", contrasenaGuardada)
+            Log.d("EmailIntoducido", emailIntroducido)
             Log.d("ContrasenhaIntroducida", contrasenaIntroducida)
 
+            runOnUiThread {
+                if (emailGuardado.equals(emailIntroducido)
+                    && contrasenaGuardada.equals(contrasenaIntroducida)
+                ) {
 
-            if (emailGuardado.equals(emailIntroducido)
-                && contrasenaGuardada.equals(contrasenaIntroducida)
-            ) {
+                    val i = Intent(this, PeliculaListActivity::class.java)
+                    startActivity(i)
 
-                val i = Intent(this, PeliculaListActivity::class.java)
-                startActivity(i)
+                } else {
+                    Toast.makeText(this, " error/datos introducidos incorrectos", Toast.LENGTH_LONG)
+                        .show()
 
-            } else {
-                Toast.makeText(this, " error/datos introducidos incorrectos", Toast.LENGTH_LONG)
-                    .show()
-
+                }
             }
+
+
 
 
             //val i = Intent(this, PeliculaListActivity::class.java)

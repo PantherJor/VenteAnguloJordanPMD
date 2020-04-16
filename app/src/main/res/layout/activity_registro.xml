@@ -15,27 +15,65 @@
         android:paddingEnd="16dp"
         android:paddingBottom="16dp"
         android:padding="@dimen/margen_pantalla"
-        tools:context=".MainActivity">
+        tools:context=".activities.MainActivity">
 
         <TextView
             android:id="@+id/tvTituloApp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/arriba_titulos"
+            android:layout_marginTop="84dp"
             android:text="@string/registro_name"
             android:textColor="@color/darkprimaycolored"
             android:textSize="@dimen/tamanho_titulos"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintHorizontal_bias="0.538"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etApellidos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+
+            android:hint="Introduce apellidos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/etNombre" />
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:ems="10"
+            android:hint="Introduce nombre"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+        <Button
+            android:id="@+id/btnRegistrarse"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="44dp"
+            android:text="@string/boton_Registro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.443"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etApellidos" />
 
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="52dp"
             android:ems="10"
             android:hint="@string/hint_email_usuario"
             android:inputType="textEmailAddress"
@@ -44,19 +82,8 @@
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/tvTituloApp" />
 
-        <TextView
-            android:id="@+id/tvEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="16dp"
-            android:text="@string/label_email_usuario"
-            android:textColor="@color/darkprimaycolored"
-            app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/tvTituloApp" />
-
         <EditText
-            android:id="@+id/etContraseña"
+            android:id="@+id/etPassword"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -70,6 +97,17 @@
             app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
         <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/label_email_usuario"
+            android:textColor="@color/darkprimaycolored"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tvTituloApp" />
+
+        <TextView
             android:id="@+id/tvContraseña"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -80,18 +118,6 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
 
-        <Button
-            android:id="@+id/btnRegistrarse"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="128dp"
-            android:layout_marginTop="36dp"
-            android:text="@string/boton_Registro"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.082"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chcheckBox" />
-
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
             android:layout_width="wrap_content"
@@ -99,63 +125,16 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.3" />
 
-        <CheckBox
-            android:id="@+id/chcheckBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="36dp"
-            android:text="@string/checkbox_Acpetar_Terminos"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/etApellidos" />
-
-        <EditText
-            android:id="@+id/etRepitContraseña"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="36dp"
-            android:ems="10"
-            android:hint="repetir contraseña"
-            android:inputType="textPassword"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/etContraseña" />
-
-        <TextView
-            android:id="@+id/tvRepitContraseña"
-            android:layout_width="109dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="48dp"
-            android:ems="10"
-            android:text="Repetir contraseña:"
-            android:textColor="@color/darkprimaycolored"
-            android:gravity="center"
-            app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/tvContraseña" />
-
         <TextView
             android:id="@+id/tvNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="24dp"
             android:text="Nombre:"
             android:textColor="@color/darkprimaycolored"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/tvRepitContraseña" />
-
-        <EditText
-            android:id="@+id/etNombre"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="36dp"
-            android:ems="10"
-            android:hint="Introduce nombre"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/etRepitContraseña" />
+            app:layout_constraintTop_toBottomOf="@+id/tvContraseña" />
 
         <TextView
             android:id="@+id/tvApellidos"
@@ -167,18 +146,6 @@
             android:textColor="@color/darkprimaycolored"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
-
-        <EditText
-            android:id="@+id/etApellidos"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="36dp"
-            android:hint="Introduce apellidos"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/etNombre" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -11,6 +11,16 @@
         android:layout_height="match_parent">
 
 
+        <Button
+            android:id="@+id/btnGuardardatos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:text="Guardar"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPais" />
+
         <EditText
             android:id="@+id/editTextgenero"
             android:layout_width="wrap_content"
@@ -37,13 +47,13 @@
             android:id="@+id/editTextnewtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="64dp"
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.114"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/seleccionarImagen" />
+            app:layout_constraintTop_toBottomOf="@+id/imageViewadd" />
 
         <TextView
             android:id="@+id/textViewano"
@@ -60,7 +70,7 @@
             android:id="@+id/editTextano"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="68dp"
+            android:layout_marginTop="64dp"
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
@@ -98,7 +108,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.113"
+            app:layout_constraintHorizontal_bias="0.114"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@+id/editTextgenero" />
 
@@ -106,24 +116,22 @@
             android:id="@+id/btnAnadir"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
             android:layout_marginTop="24dp"
             android:text="Añadir"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.17"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toEndOf="@+id/btnGuardardatos"
             app:layout_constraintTop_toBottomOf="@+id/editTextPais" />
 
         <TextView
             android:id="@+id/textViewtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="240dp"
             android:layout_marginEnd="52dp"
             android:text="Título:"
             android:textColor="@color/darkprimaycolored"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
-            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -133,17 +141,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.27" />
-
-        <Button
-            android:id="@+id/seleccionarImagen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="36dp"
-            android:text="Selecciona imagen"
-            android:textSize="10sp"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewadd" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
